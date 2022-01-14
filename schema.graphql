@@ -10,6 +10,10 @@ type SumReward @entity {
   id: ID! # AccountId
   totalReward: BigInt!
   blockheight: Int!
+  # Disabling the reverse lookup under the assumption that 
+  # the team will use automated testing to check submitted
+  # applications 
+  #
   # Customise the name of staking rewards with reverse lookup
-  rewardsList: [StakingReward] @derivedFrom(field:"account")
+  # rewardsList: [StakingReward] @derivedFrom(field:"account")
 }
